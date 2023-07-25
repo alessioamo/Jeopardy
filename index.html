@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Jeopardy</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body class="unselectable-text">
+        <div class="mainMenu" id="mainMenu" onclick="startGame()">
+            <p class="beginText">CLICK TO BEGIN</p>
+        </div>
+
+        <div>
+            <div class="board">
+                <div id="categoryContainer"></div>
+                <div id="questionContainer"></div>
+                <div id="scoreboardContainer"></div>
+            </div>
+        </div>
+
+        <!-- AUDIO -->
+        <audio id="introAudio" autoplay>
+            <source src="audio/Intro.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="fillBoardAudio" autoplay>
+            <source src="audio/Board Fill.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="dailyDoubleAudio" autoplay>
+            <source src="audio/Daily Double.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="thinkMusicAudio" autoplay>
+            <source src="audio/Think Music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="outroAudio" autoplay>
+            <source src="audio/Outro.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="timesUp" autoplay>
+            <source src="audio/Times Up.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- AUDIO -->
+
+        <!-- VIDEO -->
+        <video id="introVideo" loop muted>
+            <source src="videos/Intro Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- VIDEO -->
+
+        <!-- DAILY DOUBLE -->
+        <div class="dailyDoubleBox hidden" id="dailyDoubleBox">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <!-- DAILY DOUBLE -->
+
+        <!-- FINAL JEOPARDY -->
+        <div class="finalJeopardyBox hidden" id="finalJeopardyBox">
+            <div class="frontFinalJeopardy">
+                <p class="finalJeopardyCategory" onclick="revealFinalJeopardy(this)">Final Jeopardy Category</p>
+                <p class="finalClue hidden" id="finalClue"></p>
+            </div>
+            <div class="backFinalJeopardy"></div>
+        </div>
+        <!-- FINAL JEOPARDY -->
+
+        <!-- ESCAPE MENU -->
+        <div class="escapeMenu" id="escapeMenu">
+            <button onclick="beginFinalJeopardy()">Button 1</button>
+            <button onclick="displayKeybinds()">Keybinds</button>
+            <button onclick="displayTimeValues()">Times</button>
+            <button onclick="closeMenu()" class="closeMenuButton">Close</button>
+        </div>
+        <!-- ESCAPE MENU -->
+
+        <!-- KEYBINDS MENU -->
+            <div class="keyBinds" id="keybindsMenu">
+                
+            </div>
+        <!-- KEYBINDS MENU -->
+        
+        <!-- TIMER MENU -->
+            <div class="timerMenu" id="timerMenu">
+
+            </div>
+        <!-- TIMER MENU -->
+
+        <script src="main.js"></script>
+        <script src="saveLoad.js"></script>
+    </body>
+</html>
