@@ -4,7 +4,7 @@
 // These are the values to change for point values, category names, questions and solutions
 const values = [200, 400, 600, 800, 1000];
 const categories = ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5", "Category 6"];
-const NUMBEROFPLAYERS = 3;
+const NUMBEROFPLAYERS = 2;
 var enableClueTransition = true;
 var isSoundEnabled = true;
 var isVideoEnabled = true;
