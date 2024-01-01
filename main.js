@@ -3,12 +3,14 @@
 // ------------------------------------------------------------------------------------------------
 // These are the values to change for point values, category names, questions and solutions
 const values = [200, 400, 600, 800, 1000];
-const categories = ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5", "Category 6"];
+//const categories = ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5", "Category 6"];
+const categories = ["Rhyme Time", "Decades of Music", "O' Canada", "Back to High School", "Hollywood", "Animals"];
+//const categories = ["Famous Movie Quotes", "Year in Review", "Animals", "Disney and Pixar", "Rhyme Time", "Superheroes"];
 const NUMBEROFPLAYERS = 2;
 var enableClueTransition = true;
 var isSoundEnabled = true;
 var isVideoEnabled = true;
-var skipIntro = false;
+var skipIntro = true;
 var timerToAnswer = true;
 var enableQuestionTimeout = true;
 var enableControls = true;
@@ -17,14 +19,80 @@ var enableDailyDouble = true;
 var enableFinalJeopardy = true; // Will need paper and pencil for each team
 //for images <img src="images/Green Plus.png">
 //384 is max characters for good size
+// const questions = [
+//     [200, 'Category 1 - 200 Point Clue', 'Category 2 - 200 Point Clue', 'Category 3 - 200 Point Clue', 'Category 4 - 200 Point Clue', 'Category 5 - 200 Point Clue', 'Category 6 - 200 Point Clue'],
+//     [400, 'Category 1 - 400 Point Clue', 'Category 2 - 400 Point Clue', 'Category 3 - 400 Point Clue', 'Category 4 - 400 Point Clue', 'Category 5 - 400 Point Clue', 'Category 6 - 400 Point Clue'],
+//     [600, 'Category 1 - 600 Point Clue', 'Category 2 - 600 Point Clue', 'Category 3 - 600 Point Clue', 'Category 4 - 600 Point Clue', 'Category 5 - 600 Point Clue', 'Category 6 - 600 Point Clue'],
+//     [800, 'Category 1 - 800 Point Clue', 'Category 2 - 800 Point Clue', 'Category 3 - 800 Point Clue', 'Category 4 - 800 Point Clue', 'Category 5 - 800 Point Clue', 'Category 6 - 800 Point Clue'],
+//     [1000, 'Category 1 - 1000 Point Clue', 'Category 2 - 1000 Point Clue', 'Category 3 - 1000 Point Clue', 'Category 4 - 1000 Point Clue', 'Category 5 - 1000 Point Clue', 'Category 6 - 1000 Point Clue']
+// ];
 const questions = [
-    [200, 'Category 1 - 200 Point Clue', 'Category 2 - 200 Point Clue', 'Category 3 - 200 Point Clue', 'Category 4 - 200 Point Clue', 'Category 5 - 200 Point Clue', 'Category 6 - 200 Point Clue'],
-    [400, 'Category 1 - 400 Point Clue', 'Category 2 - 400 Point Clue', 'Category 3 - 400 Point Clue', 'Category 4 - 400 Point Clue', 'Category 5 - 400 Point Clue', 'Category 6 - 400 Point Clue'],
-    [600, 'Category 1 - 600 Point Clue', 'Category 2 - 600 Point Clue', 'Category 3 - 600 Point Clue', 'Category 4 - 600 Point Clue', 'Category 5 - 600 Point Clue', 'Category 6 - 600 Point Clue'],
-    [800, 'Category 1 - 800 Point Clue', 'Category 2 - 800 Point Clue', 'Category 3 - 800 Point Clue', 'Category 4 - 800 Point Clue', 'Category 5 - 800 Point Clue', 'Category 6 - 800 Point Clue'],
-    [1000, 'Category 1 - 1000 Point Clue', 'Category 2 - 1000 Point Clue', 'Category 3 - 1000 Point Clue', 'Category 4 - 1000 Point Clue', 'Category 5 - 1000 Point Clue', 'Category 6 - 1000 Point Clue']
+    [200, 'A thick baseball stick',
+        'Shape of You - Ed Sheeran',
+            'Jacques Cartier first arrived to Canada in this year',
+                'This part of a cell is known for generating power ',
+                    'The highest grossing movie of all time ',
+                        'The Dromedary camel has this many humps'],
+    [400, 'The invoice for one\'s prescription medication',
+        'I Want to Hold Your Hand - The Beatles',
+            'Canada\'s largest province by area',
+                'Give the conjugation of the French verb Être with the pronoun Nous',
+                    'This titular character has appeared in 27 action packed movies, however he was portrayed by 7 different actors',
+                        'This flightless bird has some stylish hair and a tasty name'],
+    [600, 'Almost every 365 days',
+        'I Gotta Feeling - The Black Eyed Peas',
+            'The last province to join Canada',
+                'Manitoba is sandwiched between these two provinces',
+                    'Tom Hanks\' best friend in Castaway ',
+                        'The first mammal that was cloned'],
+    [800, 'A yearly instruction book',
+        'The Show Must Go On - Queen',
+            'This hockey player scored the winning goal for Canada in the finals at the 2010 Olympics',
+                'This is the largest human organ',
+                    'This skyscraper was the primary location of Die Hard',
+                        'The scientific name for an animal with a pouch'],
+    [1000, 'A ginormous mushroom',
+        'Let\'s Get It On - Marvin Gaye',
+            'The smallest great lake',
+                '(18 ÷ 3) + (4 × 2) – (2 + 7) ',
+                    'He is the highest grossing actor of all time, one famous appearance has him wearing a short afro and another, an eyepatch',
+                        'Name one of the two mammals that lays eggs']
 ];
-const FINALJEOPARDYCLUE = "Final Jeopardy Clue";
+// const questions = [
+//     [200, '\'To Infinity and Beyond!\'',
+//         'This American singer broke a film record with her release this year',
+//             'A group of these animals is called a pride',
+//                 'Sleeping Beauty\'s name',
+//                     'One who chooses the alcohol',
+//                         'This mineral is Superman’s greatest weakness'],
+//     [400, '\'Say ‘Hello’ to my little friend!\'',
+//         'This singer headlined at the Super Bowl this year',
+//             'You\'ll find it hard to catch a cheetah, as for this animal, he\'s the slowest one',
+//                 'She is the first Disney Princess',
+//                     'A jovial star',
+//                         'This butler serves Batman'],
+//     [600, '\'Hasta la vista, baby.\'',
+//         'This movie was the highest grossing movie of 2023',
+//             'These birds are the largest of the bunch, but can’t get their bodies off the ground',
+//                 'This is the first Pixar movie',
+//                     'A school group that studies eyewear',
+//                         'You won’t like him when he’s angry'],
+//     [800, '\'Why so serious?\'',
+//         'This actor might portray a superhero with no powers, however he might have powers himself after he escaped death near the start of the year',
+//             'Male penguins give female penguins this in an attempt to win her over',
+//                 'The six main characters in the Mickey Mouse universe',
+//                     'What one may find on one’s sole after walking through the dog park',
+//                         'This colorful villain is known for butting heads with Spiderman'],
+//     [1000, '\'It\'s classified. I could tell you, but then I\'d have to kill you.\'',
+//         'This genius billionaire bought Twitter last year and renamed it to X this year',
+//             'Sea otters can be seen doing this to avoid drifting apart while they sleep. Humans also do this as a sign of affection',
+//                 'For Nemo’s initiation, he needed to swim through this',
+//                     'A stage play about a wooly South American pack animal',
+//                         'This Marvel actor holds the record for the longest running appearance as the same character at 24 years']
+// ];
+//const FINALJEOPARDYCLUE = "Final Jeopardy Clue";
+const FINALJEOPARDYCLUE = "Night is young and the music's high<br>With a bit of rock music<br>Everything is fine<br>You're in the mood for a dance";
+//const FINALJEOPARDYCLUE = "Phoebe states that she hates this store chain and its mass-produced products, because she believes there is no symbolical history behind them";
 // Solutions aren't displayed but you can put them here if you want them
 const solutions = [];
 // ------------------------------------------------------------------------------------------------
@@ -46,15 +114,15 @@ const INTROVIDEO = "introVideo";
 var DISPLAYCATEGORIESKEY = "-";
 var FILLBOARDKEY = "=";
 var TEAM1KEY = "1";
-var TEAM2KEY = "3";
+var TEAM2KEY = "a";
 var TEAM3KEY = "2";
 var teamKeys = [{teamNumber: 1, keyToPress: TEAM1KEY, canPress: false}, {teamNumber: 2, keyToPress: TEAM2KEY, canPress: false}, {teamNumber: 3, keyToPress: TEAM3KEY, canPress: false}];
 //-----------------------------------KEY BINDS-----------------------------------
 
 //----------------------------------TIME VALUES----------------------------------
-var TIMETOANSWER = 5000; // in milliseconds (multiply seconds by 1000)
+var TIMETOANSWER = 5000; // Time to answer after pressing buzzer
 var TIMETOANSWERDAILYDOUBLE = 5000;
-var TIMETOQUESTIONTIMEOUT = 5000;
+var TIMETOQUESTIONTIMEOUT = 50000; // Time to answer after clicking on a question
 const TIMETODISPLAYCATEGORIES = 2000;
 const TIMETOFILLBOARD = 500;
 const TIMETOSTARTFINALJEOPARDY = 2000;
@@ -438,6 +506,7 @@ function toggleActive(element, tileValue) {
             var rowIndex = ((parseInt(element.querySelector('.question-value').textContent.slice(1)) / 200) - 1);
             var rowArray = questions[rowIndex];
             var columnIndex = rowArray.indexOf(element.querySelector('.question-answer').textContent);
+            console.log("COLUMN: " + columnIndex);
             console.log("Row Index: " + rowIndex + ". Column Index: " + columnIndex + ". Together: " + rowIndex+","+columnIndex + ". Daily Double: " + dailyDoubleIndex);
             if (rowIndex+","+columnIndex == dailyDoubleIndex) {
                 interruptQuestionTimeoutTimer();

@@ -86,6 +86,8 @@ body {
         .tile.category {
             color: #ddd;
             border-bottom: 10px solid #000;
+            font-size: 50px;
+            text-align: center;
 
             cursor: default;
         }
