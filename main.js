@@ -10,7 +10,7 @@ const NUMBEROFPLAYERS = 2;
 var enableClueTransition = true;
 var isSoundEnabled = true;
 var isVideoEnabled = true;
-var skipIntro = true;
+var skipIntro = false;
 var timerToAnswer = true;
 var enableQuestionTimeout = true;
 var enableControls = true;
@@ -113,8 +113,8 @@ const INTROVIDEO = "introVideo";
 //-----------------------------------KEY BINDS-----------------------------------
 var DISPLAYCATEGORIESKEY = "-";
 var FILLBOARDKEY = "=";
-var TEAM1KEY = "1";
-var TEAM2KEY = "a";
+var TEAM1KEY = "3";
+var TEAM2KEY = "c";
 var TEAM3KEY = "2";
 var teamKeys = [{teamNumber: 1, keyToPress: TEAM1KEY, canPress: false}, {teamNumber: 2, keyToPress: TEAM2KEY, canPress: false}, {teamNumber: 3, keyToPress: TEAM3KEY, canPress: false}];
 //-----------------------------------KEY BINDS-----------------------------------
