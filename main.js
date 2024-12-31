@@ -11,11 +11,11 @@ const NUMBEROFPLAYERS = 2;
 var enableClueTransition = true;
 var isSoundEnabled = true;
 var isVideoEnabled = true;
-var skipIntro = false;
+var skipIntro = true;
 var timerToAnswer = true;
 var enableQuestionTimeout = true;
 var enableControls = true;
-var enableBoardLoadAnimation = true;
+var enableBoardLoadAnimation = false;
 var enableDailyDouble = true;
 var enableFinalJeopardy = true; // Will need paper and pencil for each team
 //for images <img src="images/Green Plus.png">
@@ -126,7 +126,8 @@ const questions = [
 //     [1000, 'Category 1 - 1000 Point Clue', 'Category 2 - 1000 Point Clue', 'Category 3 - 1000 Point Clue', 'Category 4 - 1000 Point Clue', 'Category 5 - 1000 Point Clue', 'Category 6 - 1000 Point Clue']
 // ];
 //const FINALJEOPARDYCLUE = "Final Jeopardy Clue";
-const FINALJEOPARDYCLUE = "Night is young and the music's high<br>With a bit of rock music<br>Everything is fine<br>You're in the mood for a dance";
+// const FINALJEOPARDYCLUE = "Night is young and the music's high<br>With a bit of rock music<br>Everything is fine<br>You're in the mood for a dance";
+const FINALJEOPARDYCLUE = "This olympic athlete holds the record for most gold medals, 23 to be exact.";
 //const FINALJEOPARDYCLUE = "Phoebe states that she hates this store chain and its mass-produced products, because she believes there is no symbolical history behind them";
 // Solutions aren't displayed but you can put them here if you want them
 const solutions = [];
